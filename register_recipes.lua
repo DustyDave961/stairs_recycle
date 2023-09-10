@@ -388,70 +388,70 @@ minetest.register_craft({
    type = "cooking",
    output = "default:bronze_ingot 7",
    recipe = "stairs:stair_inner_bronzeblock",
-   cooktime = 3
+   cooktime = 4
 })
 
 minetest.register_craft({
    type = "cooking",
    output = "default:bronze_ingot 5",
    recipe = "stairs:stair_outer_bronzeblock",
-   cooktime = 2
+   cooktime = 4
 })
 
 minetest.register_craft({
    type = "cooking",
    output = "default:copper_ingot 7",
    recipe = "stairs:stair_inner_copperblock",
-   cooktime = 3
+   cooktime = 4
 })
 
 minetest.register_craft({
    type = "cooking",
    output = "default:copper_ingot 5",
    recipe = "stairs:stair_outer_copperblock",
-   cooktime = 2
+   cooktime = 4
 })
 
 minetest.register_craft({
    type = "cooking",
    output = "default:gold_ingot 7",
    recipe = "stairs:stair_inner_goldblock",
-   cooktime = 3
+   cooktime = 4
 })
 
 minetest.register_craft({
    type = "cooking",
    output = "default:gold_ingot 5",
    recipe = "stairs:stair_outer_goldblock",
-   cooktime = 2
+   cooktime = 4
 })
 
 minetest.register_craft({
    type = "cooking",
    output = "default:steel_ingot 7",
    recipe = "stairs:stair_inner_steelblock",
-   cooktime = 3
+   cooktime = 4
 })
 
 minetest.register_craft({
    type = "cooking",
    output = "default:steel_ingot 5",
    recipe = "stairs:stair_outer_steelblock",
-   cooktime = 2
+   cooktime = 4
 })
 
 minetest.register_craft({
    type = "cooking",
    output = "default:tin_ingot 7",
    recipe = "stairs:stair_inner_tinblock",
-   cooktime = 3
+   cooktime = 4
 })
 
 minetest.register_craft({
    type = "cooking",
    output = "default:tin_ingot 5",
    recipe = "stairs:stair_outer_tinblock",
-   cooktime = 2
+   cooktime = 4
 })
 
 --Obsidian
