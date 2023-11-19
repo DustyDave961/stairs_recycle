@@ -434,151 +434,48 @@ minetest.register_craft({
    cooktime = 4
 })
 
-minetest.register_craft({
-   type = "cooking",
-   output = "default:tin_ingot 7",
-   recipe = "stairs:stair_inner_tinblock",
-   cooktime = 4
-})
-
-minetest.register_craft({
-   type = "cooking",
-   output = "default:tin_ingot 5",
-   recipe = "stairs:stair_outer_tinblock",
-   cooktime = 4
-})
-
---Obsidian
-minetest.register_craft({
-   output = "stairs:slab_obsidian 3",
-   recipe = {
-      {"stairs:stair_outer_obsidian", "stairs:stair_outer_obsidian", "stairs:stair_outer_obsidian"}
-   }
-})
-
-minetest.register_craft({
-   type = "shapeless",
-   output = "stairs:stair_obsidian",
-   recipe = {"stairs:stair_inner_obsidian"},
-})
-
-minetest.register_craft({
-   output = "stairs:slab_obsidian_block 3",
-   recipe = {
-      {"stairs:stair_outer_obsidian_block", "stairs:stair_outer_obsidian_block", "stairs:stair_outer_obsidian_block"}
-   }
-})
-
-minetest.register_craft({
-   type = "shapeless",
-   output = "stairs:stair_obsidian_block",
-   recipe = {"stairs:stair_inner_obsidian_block"},
-})
-
-minetest.register_craft({
-   output = "stairs:slab_obsidian_glass 3",
-   recipe = {
-      {"stairs:stair_outer_obsidian_glass", "stairs:stair_outer_obsidian_glass", "stairs:stair_outer_obsidian_glass"}
-   }
-})
-
-minetest.register_craft({
-   type = "shapeless",
-   output = "stairs:stair_obsidian_glass",
-   recipe = {"stairs:stair_inner_obsidian_glass"},
-})
-
-minetest.register_craft({
-   output = "stairs:slab_obsidianbrick 3",
-   recipe = {
-      {"stairs:stair_outer_obsidianbrick", "stairs:stair_outer_obsidianbrick", "stairs:stair_outer_obsidianbrick"}
-   }
-})
-
-minetest.register_craft({
-   type = "shapeless",
-   output = "stairs:stair_obsidianbrick",
-   recipe = {"stairs:stair_inner_obsidianbrick"},
-})
-
---Wood
-minetest.register_craft({
-   output = "stairs:slab_wood 3",
-   recipe = {
-      {"stairs:stair_outer_wood", "stairs:stair_outer_wood", "stairs:stair_outer_wood"}
-   }
-})
-
-minetest.register_craft({
-   output = "stairs:slab_acacia_wood 3",
-   recipe = {
-      {"stairs:stair_outer_acacia_wood", "stairs:stair_outer_acacia_wood", "stairs:stair_outer_acacia_wood"}
-   }
-})
-
-minetest.register_craft({
-   output = "stairs:slab_aspen_wood 3",
-   recipe = {
-      {"stairs:stair_outer_aspen_wood", "stairs:stair_outer_aspen_wood", "stairs:stair_outer_aspen_wood"}
-   }
-})
-
-minetest.register_craft({
-   output = "stairs:slab_junglewood 3",
-   recipe = {
-      {"stairs:stair_outer_junglewood", "stairs:stair_outer_junglewood", "stairs:stair_outer_junglewood"}
-   }
-})
-
-minetest.register_craft({
-   output = "stairs:slab_pine_wood 3",
-   recipe = {
-      {"stairs:stair_outer_pine_wood", "stairs:stair_outer_pine_wood", "stairs:stair_outer_pine_wood"}
-   }
-})
-
---Register normal stairs recipes
+--Register crafting recipes
 local shapeless = {
-   {"stairs:stair_inner_wood",        "stairs:stair_wood"},
-   {"stairs:stair_inner_acacia_wood", "stairs:stair_acacia_wood"},
-   {"stairs:stair_inner_aspen_wood",  "stairs:stair_aspen_wood"},
-   {"stairs:stair_inner_brick",       "stairs:stair_brick"},
-   {"stairs:stair_inner_junglewood",  "stairs:stair_junglewood"},
-   {"stairs:stair_inner_pine_wood",   "stairs:stair_pine_wood"},
+	{"stairs:stair_outer_acacia_wood",    "stairs:slab_acacia_wood"},
+	{"stairs:stair_inner_acacia_wood",    "stairs:stair_acacia_wood"},
+	{"stairs:stair_outer_aspen_wood",     "stairs:slab_aspen_wood"},
+	{"stairs:stair_inner_aspen_wood",     "stairs:stair_aspen_wood"},
+	{"stairs:stair_inner_brick",          "stairs:stair_brick"},
+	{"stairs:stair_outer_junglewood",     "stairs:slab_junglewood"},
+	{"stairs:stair_inner_junglewood",     "stairs:stair_junglewood"},
+	{"stairs:stair_outer_obsidian",       "stairs:slab_obsidian"},
+	{"stairs:stair_inner_obsidian",       "stairs:stair_obsidian"},
+	{"stairs:stair_outer_obsidian_block", "stairs:slab_obsidian_block"},
+	{"stairs:stair_inner_obsidian_block", "stairs:stair_obsidian_block"},
+	{"stairs:stair_outer_obsidianbrick",  "stairs:slab_obsidianbrick"},
+	{"stairs:stair_inner_obsidianbrick",  "stairs:stair_obsidianbrick"},
+	{"stairs:stair_outer_obsidian_glass", "stairs:slab_obsidian_glass"},
+	{"stairs:stair_inner_obsidian_glass", "stairs:stair_obsidian_glass"},
+	{"stairs:stair_outer_pine_wood",      "stairs:slab_pine_wood"},
+	{"stairs:stair_inner_pine_wood",      "stairs:stair_pine_wood"},
+	{"stairs:stair_outer_wood",           "stairs:slab_wood"},
+	{"stairs:stair_inner_wood",           "stairs:stair_wood"},
 }
 
 for _, data in pairs(shapeless) do
 	minetest.register_craft({
-      type   = "shapeless",
-      recipe = {data[1]},
-      output = data[2],
-   })
+		type   = "shapeless",
+		recipe = {data[1]},
+		output = data[2],
+	})
 end
 
 --Register smelting recipes
 local cooking = {
+	{"stairs:stair_inner_tinblock", "default:tin_ingot 8"},
+	{"stairs:stair_outer_tinblock", "default:tin_ingot 6"},
 }
 
 for _, data in pairs(cooking) do
 	minetest.register_craft({
-      type     = "cooking",
-      recipe   = {data[1]},
-      output   = data[2],
-      cooktime = data[3],
-   })
+		type     = "cooking",
+		recipe   = {data[1]},
+		output   = data[2],
+		cooktime = data[3] or 4,
+	})
 end
-
---Grinding recipes
-local technic_grinding = {
-      {"stairs:stair_outer_tinblock", "technic:tin_dust 5", 6},
-}
-
-if minetest.get_modpath("technic") then
-   for _, data in pairs(technic_grinding) do
-      technic.register_grinder_recipe({input = {data[1]}, output = data[2], time = data[3]})
-   end
-end
-
-table.insert(shapeless, {"", ""})
-table.insert(cooking, {"", ""})
-table.insert(technic_grinding, {"", ""})
