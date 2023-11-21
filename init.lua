@@ -75,36 +75,37 @@ for _, data in pairs(shapeless) do
 end
 
 --Register smelting recipes
-local cooking = {
-	{"stairs:stair_inner_bronzeblock",   "default:bronze_ingot 8"},
-	{"stairs:stair_outer_bronzeblock",   "default:bronze_ingot 6"},
-	{"stairs:stair_inner_copperblock",   "default:copper_ingot 8"},
-	{"stairs:stair_outer_copperblock",   "default:copper_ingot 6"},
-	{"stairs:stair_inner_desert_cobble", "stairs:stair_inner_desert_stone", 3},
-	{"stairs:stair_outer_desert_cobble", "stairs:stair_outer_desert_stone", 2},
-	{"stairs:slab_desert_cobble",        "stairs:slab_desert_stone", 2},
-	{"stairs:stair_desert_cobble",       "stairs:stair_desert_stone", 2},
-	{"stairs:stair_inner_goldblock",     "default:gold_ingot 8"},
-	{"stairs:stair_outer_goldblock",     "default:gold_ingot 6"},
-	{"stairs:stair_inner_steelblock",    "default:steel_ingot 8"},
-	{"stairs:stair_outer_steelblock",    "default:steel_ingot 6"},
-	{"stairs:stair_inner_cobble",        "stairs:stair_inner_stone", 3},
-	{"stairs:stair_outer_cobble",        "stairs:stair_outer_stone", 2},
-	{"stairs:slab_cobble",               "stairs:slab_stone", 2},
-	{"stairs:stair_cobble",              "stairs:stair_stone", 2},
-	{"stairs:stair_inner_mossycobble",   "stairs:stair_inner_stone", 3},
-	{"stairs:stair_outer_mossycobble",   "stairs:stair_outer_stone", 2},
-	{"stairs:slab_mossycobble",          "stairs:slab_stone", 2},
-	{"stairs:stair_mossycobble",         "stairs:stair_stone", 2},
-	{"stairs:stair_inner_tinblock",      "default:tin_ingot 8"},
-	{"stairs:stair_outer_tinblock",      "default:tin_ingot 6"},
+local smelting_recipes = {
+    {input="stairs:stair_inner_bronzeblock", output="default:bronze_ingot 8", cooktime=4},
+    {input="stairs:stair_outer_bronzeblock", output="default:bronze_ingot 6", cooktime=4},
+    {input="stairs:stair_inner_copperblock", output="default:copper_ingot 8", cooktime=4},
+    {input="stairs:stair_outer_copperblock", output="default:copper_ingot 6", cooktime=4},
+    {input="stairs:stair_inner_desert_cobble", output="stairs:stair_inner_desert_stone 3", cooktime=4},
+    {input="stairs:stair_outer_desert_cobble", output="stairs:stair_outer_desert_stone 2", cooktime=4},
+    {input="stairs:slab_desert_cobble", output="stairs:slab_desert_stone 2", cooktime=4},
+    {input="stairs:stair_desert_cobble", output="stairs:stair_desert_stone 2", cooktime=4},
+    {input="stairs:stair_inner_goldblock", output="default:gold_ingot 8", cooktime=4},
+    {input="stairs:stair_outer_goldblock", output="default:gold_ingot 6", cooktime=4},
+    {input="stairs:stair_inner_steelblock", output="default:steel_ingot 8", cooktime=4},
+    {input="stairs:stair_outer_steelblock", output="default:steel_ingot 6", cooktime=4},
+    {input="stairs:stair_inner_cobble", output="stairs:stair_inner_stone 3", cooktime=4},
+    {input="stairs:stair_outer_cobble", output="stairs:stair_outer_stone 2", cooktime=4},
+    {input="stairs:slab_cobble", output="stairs:slab_stone 2", cooktime=4},
+    {input="stairs:stair_cobble", output="stairs:stair_stone 2", cooktime=4},
+    {input="stairs:stair_inner_mossycobble", output="stairs:stair_inner_stone 3", cooktime=4},
+    {input="stairs:stair_outer_mossycobble", output="stairs:stair_outer_stone 2", cooktime=4},
+    {input="stairs:slab_mossycobble", output="stairs:slab_stone 2", cooktime=4},
+    {input="stairs:stair_mossycobble", output="stairs:stair_stone 2", cooktime=4},
+    {input="stairs:stair_inner_tinblock", output="default:tin_ingot 8", cooktime=4},
+    {input="stairs:stair_outer_tinblock", output="default:tin_ingot 6", cooktime=4},
 }
 
-for _, data in pairs(cooking) do
-	minetest.register_craft({
-		type     = "cooking",
-		recipe   = {data[1]},
-		output   = data[2],
-		cooktime = data[3] or 4,
-	})
+-- Register the smelting recipes
+for _, recipe in ipairs(smelting_recipes) do
+    minetest.register_craft({
+        type = "cooking",
+        output = recipe.output,
+        recipe = recipe.input,
+        cooktime = recipe.cooktime,  -- Use the cook time from the recipe
+    })
 end
