@@ -84,21 +84,21 @@ for _,i in pairs(cooking) do
 end
 
 local wood = {
-	{"stairs:stair_outer_acacia_wood", "stairs:slab_acacia_wood"},
-	{"stairs:stair_inner_acacia_wood", "stairs:stair_acacia_wood"},
-	{"stairs:stair_acacia_wood",       "stairs:stair_outer_acacia_wood"},
-	{"stairs:stair_outer_aspen_wood",  "stairs:slab_aspen_wood"},
-	{"stairs:stair_inner_aspen_wood",  "stairs:stair_aspen_wood"},
-	{"stairs:stair_aspen_wood",        "stairs:stair_outer_aspen_wood"},
-	{"stairs:stair_outer_junglewood",  "stairs:slab_junglewood"},
-	{"stairs:stair_inner_junglewood",  "stairs:stair_junglewood"},
-	{"stairs:stair_junglewood",        "stairs:stair_outer_junglewood"},
-	{"stairs:stair_outer_pine_wood",   "stairs:slab_pine_wood"},
-	{"stairs:stair_pine_wood",         "stairs:stair_outer_pine_wood"},
-	{"stairs:stair_inner_pine_wood",   "stairs:stair_pine_wood"},
-	{"stairs:stair_outer_wood",        "stairs:slab_wood"},
-	{"stairs:stair_wood",              "stairs:stair_outer_wood"},
-	{"stairs:stair_inner_wood",        "stairs:stair_wood"},
+	{"stairs:stair_outer_acacia_wood 2", "stairs:slab_acacia_wood 2"},
+	{"stairs:stair_inner_acacia_wood 2", "stairs:stair_acacia_wood 2"},
+	{"stairs:stair_acacia_wood 2",       "stairs:stair_outer_acacia_wood 2"},
+	{"stairs:stair_outer_aspen_wood 2",  "stairs:slab_aspen_wood 2"},
+	{"stairs:stair_inner_aspen_wood 2",  "stairs:stair_aspen_wood 2"},
+	{"stairs:stair_aspen_wood 2",        "stairs:stair_outer_aspen_wood 2"},
+	{"stairs:stair_outer_junglewood 2",  "stairs:slab_junglewood 2"},
+	{"stairs:stair_inner_junglewood 2",  "stairs:stair_junglewood 2"},
+	{"stairs:stair_junglewood 2",        "stairs:stair_outer_junglewood 2"},
+	{"stairs:stair_outer_pine_wood 2",   "stairs:slab_pine_wood 2"},
+	{"stairs:stair_pine_wood 2",         "stairs:stair_outer_pine_wood 2"},
+	{"stairs:stair_inner_pine_wood 2",   "stairs:stair_pine_wood 2"},
+	{"stairs:stair_outer_wood 2",        "stairs:slab_wood 2"},
+	{"stairs:stair_wood 2",              "stairs:stair_outer_wood 2"},
+	{"stairs:stair_inner_wood 2",        "stairs:stair_wood 2"},
 }
 	
 if minetest.get_modpath("elepower_machines") then
