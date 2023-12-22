@@ -26,6 +26,7 @@ local stairs = {
 	{material = "stone"},
 	{material = "stone_block"},
 	{material = "stonebrick"},
+	{material = "straw"},
 	{material = "wood"},
 }
 
@@ -115,25 +116,6 @@ for _, i in pairs(obsidian_recipes) do
 		}
 	})
 end
-
---straw recipes
-minetest.register_craft({output = "farming:wheat 8", recipe = {
-		{"stairs:stair_inner_straw"},
-	}
-})
-minetest.register_craft({output = "farming:wheat 7", recipe = {
-		{"stairs:stair_straw"},
-	}
-})
-minetest.register_craft({output = "farming:wheat 6", recipe = {
-		{"stairs:stair_outer_straw"},
-	}
-})
-minetest.register_craft({output = "stairs:slab_straw 3", recipe = {
-		{"stairs:stair_outer_straw"},
-		{"stairs:stair_inner_straw"},
-	}
-})
 
 --machine recipes
 local wood = {
