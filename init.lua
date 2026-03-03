@@ -172,8 +172,8 @@ if minetest.get_modpath("elepower_machines") then
 	end
 end
 
-if minetest.get_modpath("technic") then
+--[[if minetest.get_modpath("technic") then
 for _, i in pairs(alloys) do
 		technic.register_alloy_recipe({input = i.recipe, output = i.output, time = i.time or 10})
 	end
-end
+end]]--
