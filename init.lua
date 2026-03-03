@@ -88,18 +88,10 @@ end
 
 --smelting recipes
 local smelting_recipes = {
-	{output = "default:bronze_ingot 8",          recipe = "stairs:stair_inner_bronzeblock"},
-	{output = "default:bronze_ingot 6",          recipe = "stairs:stair_outer_bronzeblock"},
-	{output = "default:copper_ingot 8",          recipe = "stairs:stair_inner_copperblock"},
-	{output = "default:copper_ingot 6",          recipe = "stairs:stair_outer_copperblock"},
 	{output = "stairs:stair_inner_desert_stone", recipe = "stairs:stair_inner_desert_cobble", time = 3},
 	{output = "stairs:stair_outer_desert_stone", recipe = "stairs:stair_outer_desert_cobble", time = 2},
 	{output = "stairs:slab_desert_stone",        recipe = "stairs:slab_desert_cobble", time = 2},
 	{output = "stairs:stair_desert_stone",       recipe = "stairs:stair_desert_cobble", time = 3},
-	{output = "default:gold_ingot 8",            recipe = "stairs:stair_inner_goldblock"},
-	{output = "default:gold_ingot 6",            recipe = "stairs:stair_outer_goldblock"},
-	{output = "default:steel_ingot 8",           recipe = "stairs:stair_inner_steelblock"},
-	{output = "default:steel_ingot 6",           recipe = "stairs:stair_outer_steelblock"},
 	{output = "stairs:slab_stone",               recipe = "stairs:slab_cobble", time = 2},
 	{output = "stairs:slab_stone",               recipe = "stairs:slab_mossycobble", time = 2},
 	{output = "stairs:stair_inner_stone",        recipe = "stairs:stair_inner_cobble", time = 3},
@@ -108,8 +100,6 @@ local smelting_recipes = {
 	{output = "stairs:stair_outer_stone",        recipe = "stairs:stair_outer_mossycobble", time = 2},
 	{output = "stairs:stair_stone",              recipe = "stairs:stair_cobble", time = 3},
 	{output = "stairs:stair_stone",              recipe = "stairs:stair_mossycobble", time = 3},
-	{output = "default:tin_ingot 8",             recipe = "stairs:stair_inner_tinblock"},
-	{output = "default:tin_ingot 6",             recipe = "stairs:stair_outer_tinblock"},
 }
 
 for _, data in pairs(smelting_recipes) do
